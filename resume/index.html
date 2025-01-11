@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        main {
+            max-width: 800px;
+            background: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        main > header > h1, main > header > p {
+            text-align: center;
+        }
+        article > header {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Aimee Wang</h1>
+            <p>Email: aimee.wang@example.com</p>
+            <p>San Francisco, CA 94102 | (415) 555-1234</p>
+        </header>
+
+        <section id="education">
+            <header>
+                <h2>Education</h2>
+            </header>
+            <p><strong>Bachelor of Science in Data Science</strong>, expected June 2026</p>
+            <p>University of California, Berkeley</p>
+            <p>GPA: 3.85/4.00</p>
+            <p>Related Course Work: Machine Learning, Data Structures, Statistical Analysis, Database Systems</p>
+        </section>
+
+        <section id="skills">
+            <header>
+                <h2>Skills</h2>
+            </header>
+            <ul>
+                <li>Proficient in Python, R, and SQL</li>
+                <li>Experience with data visualization tools: Tableau, Power BI</li>
+                <li>Familiar with machine learning libraries: scikit-learn, TensorFlow</li>
+            </ul>
+        </section>
+
+        <section id="project-experience">
+            <header>
+                <h2>Project Experience</h2>
+            </header>
+            <article>
+                <header>
+                    <h3>Customer Segmentation Analysis</h3>
+                    <p>UC Berkeley, Berkeley, CA | <time datetime="2023-02-01">Feb 2023</time> - <time datetime="2023-03-01">Mar 2023</time></p>
+                </header>
+                <ul>
+                    <li>Analyzed customer purchasing behavior using Python and pandas.</li>
+                    <li>Performed clustering analysis with k-means to identify customer segments.</li>
+                    <li>Created a presentation summarizing findings for stakeholders.</li>
+                </ul>
+            </article>
+            <article>
+                <header>
+                    <h3>Interactive Game Development</h3>
+                    <p>San Francisco, CA | <time datetime="2022-07-01">Jul 2022</time> - <time datetime="2022-08-01">Aug 2022</time></p>
+                </header>
+                <ul>
+                    <li>Developed a Python-based game using the pygame library.</li>
+                    <li>Designed interactive features and appealing graphics for user engagement.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="research-experience">
+            <header>
+                <h2>Research Experience</h2>
+            </header>
+            <article>
+                <header>
+                    <h3>Research Intern</h3>
+                    <p>San Jose, CA | <time datetime="2023-06-01">Jun 2023</time> - <time datetime="2023-08-01">Aug 2023</time></p>
+                </header>
+                <ul>
+                    <li>Processed and cleaned large datasets using Python and pandas.</li>
+                    <li>Visualized trends in renewable energy adoption using matplotlib and seaborn.</li>
+                    <li>Contributed to a publication on energy consumption trends as a co-author.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="work-experience">
+            <header>
+                <h2>Work Experience</h2>
+            </header>
+            <article>
+                <header>
+                    <h3>Data Analyst Intern</h3>
+                    <p>TechCorp Solutions, San Francisco, CA | <time datetime="2022-06-01">Jun 2022</time> - <time datetime="2022-08-01">Aug 2022</time></p>
+                </header>
+                <ul>
+                    <li>Extracted and analyzed sales data using SQL to identify key trends.</li>
+                    <li>Generated weekly reports on performance metrics for management.</li>
+                    <li>Collaborated with the marketing team to optimize campaign strategies.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
