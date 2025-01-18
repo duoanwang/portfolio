@@ -2,7 +2,156 @@ body {
     /* Set line height to 1.5 times the font size
          and use the OS’s UI font as the website font
        */
+    display: block;
     font: 100%/1.5 system-ui;
     max-width: 100ch;
-    margin-inline: auto;
+    margin-inline: max(1em, (100% - 100ch) / 2);
+    padding: 1em;
+    nav ul,
+    nav ul li {
+    display: contents;
+    }
   }
+
+
+
+nav {
+    display: flex; /* Enables Flexbox for layout */
+    border-bottom: 1px solid oklch(80% 3% 200); /* Subtle cool gray border */
+  }
+
+
+/* Remove default styles from the <ul> and make it flex */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Align <li> elements horizontally */
+  flex: 1; /* Ensures the <ul> takes the full width */
+}
+
+/* Ensure <li> elements are also flex items */
+nav ul li {
+  flex: 1; /* Distribute space evenly between <li> items */
+}
+
+/* Flex behavior for <a> elements */
+nav a {
+  flex: 1; /* Ensures each <a> element takes equal space */
+  text-align: center; /* Center-aligns text inside <a> */
+  text-decoration: none; /* Remove underline from links */
+  padding: 0.5em; /* Add padding for clickable area */
+  color: inherit; /* Link text color */
+  background-color: white; /* Navigation bar background */
+  transition: background-color 0.3s; /* Smooth hover effect */
+  margin-bottom: auto;
+}
+
+
+/* Hover effect for <a> elements */
+nav a:hover {
+  background-color: #dbc7db; /* Darker shade on hover */
+  border-bottom: 0.4em solid var(--color-accent); /* Thick bottom border with lighter gray */
+  padding-bottom: calc(10px - 0.4em);
+  color: inherit; /* Text color on hover */
+}
+
+/* Highlight the current page */
+nav a.current {
+  background-color: white; /* Current page highlight */
+  color: inherit; /* Text color for visibility */
+  border-bottom: 0.4em solid oklch(90% 3% 200); /* Thick bottom border with lighter gray */
+  padding-bottom: calc(10px - 0.4em);
+}
+
+:root {
+  --color-accent: #996799; /* Your accent color */
+}
+
+/* Set the accent color for interactive elements */
+html {
+  accent-color: var(--color-accent);
+}
+
+
+/* contact */
+
+form {
+  display: grid; /* Use grid layout for form elements */
+  grid-template-columns: auto 1fr; /* Label and input field layout */
+  gap: 1em; /* Space between elements */
+}
+
+label {
+  text-align: left; /* Align text to the left */
+  font-weight: bold; /* Emphasize labels */
+  margin: 0; /* Remove default margin */
+  align-self: auto; /* Vertically align labels */
+}
+
+input, textarea {
+  font: inherit; /* Inherit font properties */
+  width: 100%; /* Make inputs fill the available space */
+  padding: 0.5em; /* Add padding for usability */
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+button {
+  grid-column: span 2; /* Make the button span both columns */
+  font: inherit; /* Inherit font properties */
+  padding: 0.7em 1em; /* Add padding for usability */
+  background-color: var(--color-accent); /* Accent color */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Match input corner rounding */
+  cursor: pointer; /* Show pointer on hover */
+}
+
+button:hover {
+  background-color: #2c74c1; /* Darker shade on hover */
+}
+
+/*projects*/
+
+.projects {
+  display: grid; /* Turn .projects into a grid container */
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Flexible column layout */
+  gap: 1em; /* Add spacing between grid items */
+}
+
+.projects article {
+  display: grid; /* Turn articles into grid containers */
+  grid-template-rows: subgrid; /* Align contents across rows */
+  grid-row: span 3; /* Span 3 rows */
+  gap: 1em; /* Spacing within articles */
+  padding: 1em; /* Add internal padding */
+  border: 1px solid #ccc; /* Optional: Add borders */
+  border-radius: 5px; /* Optional: Round corners */
+}
+
+.projects h2 {
+  margin: 0; /* Remove extra spacing around headings */
+  font-size: 1.25em; /* Adjust font size if needed */
+}
+
+.projects img {
+  width: 100%; /* Ensure images fit within their containers */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.projects p {
+  margin: 0; /* Remove default paragraph margin */
+}
+
+/* General styles for all headings */
+.projects h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1; /* Tighter leading for headings */
+  text-wrap: balance; /* Prevent uneven wrapping */
+  margin: 0; /* Remove default margin for consistency */
+}
+
+/* Specific size adjustments for hierarchy */
+.projects h1 {
+  font-size: 400%; /* 4x the body text size */
+}
