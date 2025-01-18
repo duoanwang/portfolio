@@ -80,13 +80,16 @@ form {
   display: grid; /* Use grid layout for form elements */
   grid-template-columns: auto 1fr; /* Label and input field layout */
   gap: 1em; /* Space between elements */
+  width: 100%;
 }
 
 label {
+  display: grid;
+  grid-template-columns: subgrid;
+  margin-block: 0.5em; /* Space above the label */
   text-align: left; /* Align text to the left */
   font-weight: bold; /* Emphasize labels */
-  margin: 0; /* Remove default margin */
-  align-self: auto; /* Vertically align labels */
+
 }
 
 input, textarea {
@@ -98,7 +101,8 @@ input, textarea {
 }
 
 button {
-  grid-column: span 2; /* Make the button span both columns */
+  /*grid-column: 1 / -1; /* Make the button span both columns */
+  width: 1195%;
   font: inherit; /* Inherit font properties */
   padding: 0.7em 1em; /* Add padding for usability */
   background-color: var(--color-accent); /* Accent color */
