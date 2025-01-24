@@ -1,3 +1,15 @@
+:root {
+  --color-accent: #996799; /* Your accent color */
+  /* color-scheme: light dark; */
+}
+
+
+/* Set the accent color for interactive elements */
+html {
+  accent-color: var(--color-accent);
+}
+
+
 body {
     /* Set line height to 1.5 times the font size
          and use the OS’s UI font as the website font
@@ -11,29 +23,30 @@ body {
     nav ul li {
     display: contents;
     }
-  }
+}
 
 
 
 nav {
     display: flex; /* Enables Flexbox for layout */
-    border-bottom: 1px solid oklch(80% 3% 200); /* Subtle cool gray border */
+    border-bottom: 1px solid oklch(50% 10% 200 / 40%); /* Subtle cool gray border */
+    --border-color: oklch(50% 10% 200 / 40%);
   }
 
 
-/* Remove default styles from the <ul> and make it flex */
+/*Remove default styles from the <ul> and make it flex */
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex; /* Align <li> elements horizontally */
   flex: 1; /* Ensures the <ul> takes the full width */
-}
+} 
 
-/* Ensure <li> elements are also flex items */
+/* Ensure <li> elements are also flex items
 nav ul li {
-  flex: 1; /* Distribute space evenly between <li> items */
-}
+  flex: 1; 
+} */
 
 /* Flex behavior for <a> elements */
 nav a {
@@ -42,15 +55,14 @@ nav a {
   text-decoration: none; /* Remove underline from links */
   padding: 0.5em; /* Add padding for clickable area */
   color: inherit; /* Link text color */
-  background-color: white; /* Navigation bar background */
+  background-color: inherit; /* Navigation bar background */
   transition: background-color 0.3s; /* Smooth hover effect */
   margin-bottom: auto;
 }
 
-
 /* Hover effect for <a> elements */
 nav a:hover {
-  background-color: #dbc7db; /* Darker shade on hover */
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%); /* Darker shade on hover */
   border-bottom: 0.4em solid var(--color-accent); /* Thick bottom border with lighter gray */
   padding-bottom: calc(10px - 0.4em);
   color: inherit; /* Text color on hover */
@@ -58,32 +70,24 @@ nav a:hover {
 
 /* Highlight the current page */
 nav a.current {
-  background-color: white; /* Current page highlight */
+  background-color: inherit; /* Current page highlight */
   color: inherit; /* Text color for visibility */
   border-bottom: 0.4em solid oklch(90% 3% 200); /* Thick bottom border with lighter gray */
   padding-bottom: calc(10px - 0.4em);
-}
-
-:root {
-  --color-accent: #996799; /* Your accent color */
-}
-
-/* Set the accent color for interactive elements */
-html {
-  accent-color: var(--color-accent);
-}
-
+  border-bottom-color: var(--border-color);
+} 
 
 /* contact */
 
-form {
+.contact form {
   display: grid; /* Use grid layout for form elements */
   grid-template-columns: auto 1fr; /* Label and input field layout */
   gap: 1em; /* Space between elements */
   width: 100%;
+  background-color: var(--border-color);
 }
 
-label {
+.contact label {
   display: grid;
   grid-template-columns: subgrid;
   margin-block: 0.5em; /* Space above the label */
@@ -98,22 +102,23 @@ input, textarea {
   padding: 0.5em; /* Add padding for usability */
   border: 1px solid #ccc; /* Subtle border */
   border-radius: 5px; /* Rounded corners */
+  background-color: inherit; /* White background for inputs */
 }
 
 button {
   /*grid-column: 1 / -1; /* Make the button span both columns */
-  width: 1195%;
-  font: inherit; /* Inherit font properties */
+  width: 102%;
+  font: inherit;
   padding: 0.7em 1em; /* Add padding for usability */
   background-color: var(--color-accent); /* Accent color */
-  color: white; /* White text */
+  color: inherit;
   border: none; /* Remove default border */
   border-radius: 5px; /* Match input corner rounding */
   cursor: pointer; /* Show pointer on hover */
 }
 
 button:hover {
-  background-color: #2c74c1; /* Darker shade on hover */
+  background-color: #8cb2d9; /* Darker shade on hover */
 }
 
 /*projects*/
@@ -159,3 +164,40 @@ button:hover {
 .projects h1 {
   font-size: 400%; /* 4x the body text size */
 }
+
+
+
+/* Position the theme switcher */
+label.color-scheme {
+  position: absolute; /* Take it out of the document flow */
+  top: 1rem; /* Offset from the top edge */
+  right: 1rem; /* Offset from the right edge */
+  font-size: 80%; /* Reduce font size to make it less prominent */
+  font-family: inherit; /* Inherit font-family from the parent element */
+  background-color: inherit; /* Optional: Match the navbar or page background */
+  color: inherit; /* Optional: Match the page text color */
+  padding: 0.5rem; /* Add some padding for better appearance */
+  border-radius: 4px; /* Rounded corners for a smoother look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Adjust the dropdown inside the switcher */
+label.color-scheme select {
+  font-size: 100%; /* Match the label font size */
+  padding: 0.25rem; /* Reduce padding for a compact look */
+  background-color: inherit; /* Match the label's background */
+  border: none; /* Remove the default dropdown border */
+  outline: none; /* Remove focus outline */
+  color: inherit; /* Inherit the text color */
+}
+
+/* Add a hover effect for better usability */
+label.color-scheme:hover {
+  background-color: var(--link-color); /* Highlight the background on hover */
+  color: var(--background-color); /* Invert text color for contrast */
+}
+
+label.color-scheme select:hover {
+  cursor: pointer; /* Change the cursor to indicate interactivity */
+}
+
