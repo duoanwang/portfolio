@@ -1,6 +1,5 @@
 :root {
   --color-accent: #996799; /* Your accent color */
-  /* color-scheme: light dark; */
 }
 
 
@@ -176,9 +175,9 @@ label.color-scheme {
   font-family: inherit; /* Inherit font-family from the parent element */
   background-color: inherit; /* Optional: Match the navbar or page background */
   color: inherit; /* Optional: Match the page text color */
-  padding: 0.5rem; /* Add some padding for better appearance */
+  padding: 0.2rem; /* Add some padding for better appearance */
   border-radius: 4px; /* Rounded corners for a smoother look */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 /* Adjust the dropdown inside the switcher */
@@ -186,14 +185,14 @@ label.color-scheme select {
   font-size: 100%; /* Match the label font size */
   padding: 0.25rem; /* Reduce padding for a compact look */
   background-color: inherit; /* Match the label's background */
-  border: none; /* Remove the default dropdown border */
-  outline: none; /* Remove focus outline */
+  border: none;  /*Remove the default dropdown border */
+  /*outline: none;  Remove focus outline */
   color: inherit; /* Inherit the text color */
 }
 
 /* Add a hover effect for better usability */
 label.color-scheme:hover {
-  background-color: var(--link-color); /* Highlight the background on hover */
+  /*background-color: inherit; /* Highlight the background on hover */
   color: var(--background-color); /* Invert text color for contrast */
 }
 
