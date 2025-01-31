@@ -5,33 +5,33 @@ function $$(selector, context = document) {
 }
 
 let pages = [
-    { url: '/portfolio/', title: 'Home' },
-    { url: '/portfolio/project/', title: 'Projects' },
-    { url: '/portfolio/contact/', title: 'Contact' },
-    { url: '/portfolio/resume/', title: 'Resume' },
+    { url: '', title: 'Home' },
+    { url: 'project/', title: 'Projects' },
+    { url: 'contact/', title: 'Contact' },
+    { url: 'resume/', title: 'Resume' },
     { url: 'https://github.com/duoanwang', title: 'Github' },
-  ];
+];
   
-  let nav = document.createElement('nav');
-  document.body.prepend(nav);
+let nav = document.createElement('nav');
+document.body.prepend(nav);
   
-  for (let p of pages) {
-      let a = document.createElement('a');
-      a.href = p.url;
-      a.textContent = p.title;
+for (let p of pages) {
+    let a = document.createElement('a');
+    a.href = p.url;
+    a.textContent = p.title;
   
       // Highlight the current page
-      if (a.host === location.host && a.pathname === location.pathname) {
-          a.classList.add('current');
-      }
+    if (a.host === location.host && a.pathname === location.pathname) {
+        a.classList.add('current');
+    }
   
       // Open external links in a new tab
-      if (a.host !== location.host) {
-          a.target = '_blank';
-      }
+    if (a.host !== location.host) {
+        a.target = '_blank';
+    }
   
-      nav.append(a);
-  }
+    nav.append(a);
+}
   
 
 document.body.insertAdjacentHTML(
@@ -112,5 +112,18 @@ form?.addEventListener("submit", function (event) {
 });
 
 
+export async function fetchJSON(url) {
+  try {
+      // Fetch the JSON file from the given URL
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch projects: ${response.statusText}`);
+      }
+
+
+  } catch (error) {
+      console.error('Error fetching or parsing JSON data:', error);
+  }
+}
 
 
