@@ -12,53 +12,53 @@ let pages = [
     { url: 'https://github.com/duoanwang', title: 'Github' },
 ];
   
-// let nav = document.createElement('nav');
-// document.body.prepend(nav);
-  
-// for (let p of pages) {
-//     let a = document.createElement('a');
-//     a.href = p.url;
-//     a.textContent = p.title;
-  
-//       // Highlight the current page
-//     if (a.host === location.host && a.pathname === location.pathname) {
-//         a.classList.add('current');
-//     }
-  
-//       // Open external links in a new tab
-//     if (a.host !== location.host) {
-//         a.target = '_blank';
-//     }
-  
-//     nav.append(a);
-// }
-
 let nav = document.createElement('nav');
 document.body.prepend(nav);
-
-// Check if we are on the home page
-const ARE_WE_HOME = document.documentElement.classList.contains('home');
-
+  
 for (let p of pages) {
-    let url = p.url;
-    let title = p.title;
-    // Create link and add it to nav
-    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
     let a = document.createElement('a');
-    a.href = url;
-    a.textContent = title;
-    nav.append(a);
-
+    a.href = p.url;
+    a.textContent = p.title;
+  
+      // Highlight the current page
     if (a.host === location.host && a.pathname === location.pathname) {
         a.classList.add('current');
     }
-
+  
+      // Open external links in a new tab
     if (a.host !== location.host) {
         a.target = '_blank';
     }
-
+  
     nav.append(a);
 }
+
+// let nav = document.createElement('nav');
+// document.body.prepend(nav);
+
+// // Check if we are on the home page
+// const ARE_WE_HOME = document.documentElement.classList.contains('home');
+
+// for (let p of pages) {
+//     let url = p.url;
+//     let title = p.title;
+//     // Create link and add it to nav
+//     url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
+//     let a = document.createElement('a');
+//     a.href = url;
+//     a.textContent = title;
+//     nav.append(a);
+
+//     if (a.host === location.host && a.pathname === location.pathname) {
+//         a.classList.add('current');
+//     }
+
+//     if (a.host !== location.host) {
+//         a.target = '_blank';
+//     }
+
+//     nav.append(a);
+// }
 
 
 document.body.insertAdjacentHTML(
