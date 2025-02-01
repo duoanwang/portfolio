@@ -7,7 +7,7 @@
     },
     {
         "title": "Movie Recommendation System",
-        "year": "2024",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Using collaborative filtering and sentiment analysis, this project aims to create a recommendation system that predicts user preferences for movies based on previous ratings and reviews."
     },
@@ -19,55 +19,55 @@
     },
     {
         "title": "E-commerce Sales Analysis",
-        "year": "2024",
+        "year": "2022",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "By analyzing e-commerce transaction data, this project identifies purchasing trends, customer behavior, and key factors influencing online sales performance."
     },
     {
         "title": "Fake News Detection",
-        "year": "2024",
+        "year": "2021",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "A natural language processing (NLP) approach to detecting fake news articles using classification algorithms and linguistic analysis."
     },
     {
         "title": "Health Risk Prediction",
-        "year": "2024",
+        "year": "2019",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Utilizing patient data, this project predicts potential health risks such as diabetes or heart disease using statistical models and machine learning."
     },
     {
         "title": "Customer Churn Prediction",
-        "year": "2024",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "By analyzing customer interactions, this project identifies patterns that indicate whether a customer is likely to stop using a service."
     },
     {
         "title": "Air Quality Monitoring",
-        "year": "2024",
+        "year": "2021",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "A real-time data visualization project that monitors air pollution levels and predicts future air quality trends using sensor data."
     },
     {
         "title": "Social Media Sentiment Analysis",
-        "year": "2024",
+        "year": "2020",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Using NLP techniques, this project analyzes social media posts to determine public sentiment on various topics, brands, or trends."
     },
     {
         "title": "Music Genre Classification",
-        "year": "2024",
+        "year": "2022",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Applying deep learning techniques to classify music tracks into different genres based on their audio features."
     },
     {
         "title": "Traffic Flow Prediction",
-        "year": "2024",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Using machine learning and real-time traffic data, this project forecasts traffic congestion patterns to improve urban planning and reduce delays."
     },
     {
         "title": "Personalized Learning Platform",
-        "year": "2024",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "An AI-driven platform that adapts learning materials based on student performance and engagement, providing a personalized educational experience."
     }
