@@ -171,6 +171,93 @@ button:hover {
   font-size: 400%; /* 4x the body text size */
 }
 
+.project-details {
+  margin-top: 10px;
+  font-family: Baskerville, serif;
+}
+
+.project-year {
+  font-variant-numeric: oldstyle-nums;
+  font-style: italic;
+  color: #666;
+  margin-top: 5px;
+}
+
+#projects-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr)); 
+  gap: 1rem;                  
+  padding: 1rem;              
+  margin: 1rem;               
+  border: 2px solid #ccc;     
+  border-radius: 8px;         
+  background-color: inherit;  
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); 
+  flex: 1; 
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;          
+  gap: 0.5rem;                  
+  padding: 4px 8px;
+  background-color: inherit;    
+  border: 1px solid #ddd;       
+  border-radius: 6px;           
+  transition: background-color 0.3s ease;
+}
+
+.swatch {
+  align-items: center;
+  width: 16px;                  
+  aspect-ratio: 1 / 1;          
+  background-color: var(--color); 
+  display: inline-block;        
+  border-radius: 4px;           
+  border: 1px solid #333;
+}
+
+.container {
+  display: flex;              
+  align-items: center;        
+  gap: 3rem;                            
+  margin: auto;                
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+/* make it smoother */
+path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.selected {
+  --color: oklch(66% 0.17 308) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+  &:is(.legend-item) {
+    background-color: var(--color); /* Highlight legend item background */
+    color: white;                   /* Optional: enhance text contrast */
+    font-weight: bold;              /* Optional: make the text stand out */
+  }
+}
+.wedge {
+  fill: var(--color);
+}
+
 
 
 /* Position the theme switcher */

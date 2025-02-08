@@ -183,7 +183,7 @@ export async function fetchJSON(url) {
 //   });
 // }
 
-export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+export function renderProjects(projects, containerElement, headingLevel = 'h2', totalProjects = projects.length) {
   // Step 1: Clear existing content
   containerElement.innerHTML = '';
 
@@ -201,7 +201,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
 
   const projectTitleElement = document.querySelector('.projects-title');
     if (projectTitleElement) {
-        projectTitleElement.textContent = `${projects.length} Projects `;
+        projectTitleElement.textContent = `${totalProjects} Projects `;
     }
 
   // Step 4: Loop through projects and create an article for each
@@ -217,15 +217,28 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
       const description = document.createElement('p');
       description.textContent = project.description;
 
+      // Create a paragraph for the year
+      const year = document.createElement('p');
+      year.textContent = `C. ${project.year}`; // Assuming the project object has a 'year' property
+      year.classList.add('project-year'); // Add class for styling
+
+      // Wrap description and year in a div
+      const detailsDiv = document.createElement('div');
+      detailsDiv.classList.add('project-details'); // Add class for styling
+      detailsDiv.appendChild(description);
+      detailsDiv.appendChild(year);
+
       article.innerHTML = `
           <h3>${project.title}</h3>
           <img src="${project.image}" alt="${project.title}">
-          <p>${project.description}</p>
       `;
+      // <p>${project.description}</p>
 
       // Append heading and description to the article
-      article.appendChild(heading);
-      article.appendChild(description);
+
+      // article.appendChild(heading);
+      // article.appendChild(description);
+      article.appendChild(detailsDiv);
 
       // Append article to the container
       containerElement.appendChild(article);
