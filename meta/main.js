@@ -128,7 +128,7 @@ function createScatterplot() {
     const rScale = d3
     .scaleSqrt() // Change only this line
     .domain([minLines, maxLines])
-    .range([5, 20]);
+    .range([5, 30]);
 
     const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
     dots.selectAll('circle').data(sortedCommits).join('circle');
