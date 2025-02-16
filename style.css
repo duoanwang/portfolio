@@ -340,3 +340,147 @@ label.color-scheme select:hover {
   transform: translateY(-2px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
+.gridlines line {
+  stroke: gray; /* Light color for subtle effect */
+  stroke-opacity: 0.7; /* Make lines semi-transparent */
+  stroke-dasharray: 3 3; /* Dashed lines for less prominence */
+}
+
+#stats {
+  padding: 1.5em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.summary-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.stat-block {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #777;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 1.8em;
+  color: inherit;
+  font-family: serif;
+}
+
+/* Style for the definition list with grid layout */
+dl.info {
+  display: grid;
+  grid-template-columns: max-content auto; /* dt in first column, dd in second */
+  gap: 0.5em 1em; /* Add spacing between elements */
+  align-items: start; /* Align items at the top */
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+dl.info dt {
+  margin: 0;
+  font-weight: normal; /* Make labels less prominent */
+  color: gray; /* Subtle color for labels */
+}
+
+dl.info dd {
+  margin: 0;
+  font-weight: bold; /* Make values stand out */
+}
+
+/* Style for the tooltip */
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background: rgba(0, 0, 0, 0.75); /* Dark background for contrast */
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-size: 0.9em;
+  pointer-events: none; /* Prevent interference with mouse events */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+.breakdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  text-align: center;
+  font-family: monospace;
+}
+
+.breakdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.breakdown-language {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.breakdown-lines {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.breakdown-lines span {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.breakdown-percentage {
+  font-size: 1.1em;
+  color: #444;
+}
