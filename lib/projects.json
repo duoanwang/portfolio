@@ -1,5 +1,11 @@
 [
     {
+        "title": "Bikewatching",
+        "year": "2025",
+        "image": "./images/bikewatching.jpg",
+        "description": "This interactive map visualizes BlueBikes traffic patterns and bike lane infrastructure in Greater Boston using Mapbox GL and D3.js. Station markers scale based on total traffic, with colors indicating whether a station has more departures (blue) or arrivals (orange). A time slider filters trips by time of day, dynamically updating station activity. The map also overlays Boston and Cambridge bike lanes for context. Designed for urban planners, cyclists, and researchers, this tool helps analyze bike usage trends and supports better bike infrastructure planning."
+    },
+    {
         "title": "Recipe and Rating",
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
